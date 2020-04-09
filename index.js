@@ -6,7 +6,10 @@ const _ = require("lodash");
 module.exports = function githubActionsFormatter(results, a) {
   return _.flatMap(results, (res) => {
     return res.warnings.map((warn) => {
-      return `::${warn.severity} file=${res.source},line=${warn.line},col=${warn.column}::${warn.text}`;
+      return [
+        `${res.source}: line ${warn.line}, col ${warn.column}`,
+        `::${warn.severity} file=${res.source},line=${warn.line},col=${warn.column}::${warn.text}`,
+      ].join("\n");
     });
   }).join("\n");
 };
