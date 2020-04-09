@@ -1,0 +1,19 @@
+{
+  "name": "stylelint-github-actions-formatter",
+  "version": "0.0.1",
+  "description": "A stylelint formatter for GitHub Actions",
+  "author": "Masafumi Koba",
+  "license": "MIT",
+  "repository": "ybiquitous/stylelint-github-actions-formatter",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "stylelint --custom-formatter ./index.js test/"
+  },
+  "dependencies": {
+    "stylelint": "^13.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
