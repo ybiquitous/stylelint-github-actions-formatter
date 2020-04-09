@@ -22,5 +22,4 @@ jobs:
         with:
           node-version: 12.x
       - run: npm ci
-      # - run: npm test
-      - run: npx stylelint test/
+      - run: npm test
