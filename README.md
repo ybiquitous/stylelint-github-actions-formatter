@@ -1,0 +1,1 @@
+# stylelint-github-actions-formatter
